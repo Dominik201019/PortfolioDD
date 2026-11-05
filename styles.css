@@ -39,3 +39,23 @@ footer{padding-bottom:30px}.nav-contact{transition:background .3s,opacity .3s}.m
 .service li>.vector-icon{width:11px;height:11px}.floating-tag>.vector-icon{width:10px;height:10px}
 @media(max-width:900px){.spark{width:65px;height:65px}}
 @media(max-width:650px){.spark{width:66px;height:66px}.project-symbol>.vector-icon{width:220px}.cursor>.vector-icon{width:27px;height:30px}}
+
+/* Featured portfolio project */
+.projects-box.project-showcase{padding:0;display:grid;grid-template-columns:1.35fr 1fr;gap:0;min-height:0;overflow:hidden;border:1px solid var(--line);background:transparent;border-radius:20px}
+.project-stage{padding:35px 30px 28px;background:#e9eddf;position:relative;min-width:0;overflow:hidden}.project-number{display:block;font-size:9px;letter-spacing:1.6px;color:#69745d;margin-bottom:30px}
+.project-preview{display:block;position:relative;border:1px solid #414b3925;border-radius:9px;overflow:hidden;box-shadow:0 22px 40px #28322325;transform:rotate(-3deg);transition:box-shadow .55s ease;background:#151719}
+.preview-toolbar{height:29px;display:flex;justify-content:space-between;align-items:center;gap:10px;background:#f9faf5;padding:0 10px;color:#747c6d;font-size:7px}.preview-toolbar .vector-icon{width:10px;height:10px}.preview-dots{display:flex;gap:3px}.preview-dots i{display:block;width:4px;height:4px;background:#b6bead;border-radius:50%}
+.project-preview img{display:block;width:100%;height:auto;aspect-ratio:1265/712;object-fit:cover}.preview-open{position:absolute;inset:auto 12px 12px auto;border-radius:25px;background:var(--lime);padding:10px 14px;font-size:9px;display:flex;align-items:center;gap:12px;opacity:0;translate:0 6px;transition:opacity .3s,translate .3s}.preview-open .vector-icon{width:12px;height:12px}
+.project-preview:hover,.project-preview:focus-visible{box-shadow:0 25px 45px #28322335}.project-preview:hover .preview-open,.project-preview:focus-visible .preview-open{opacity:1;translate:0 0}
+.project-stage-note{display:block;margin-top:29px;font-size:10px;color:#7b846f}.project-description{padding:42px 35px;align-self:center;min-width:0}.project-description .eyebrow{font-size:8px;letter-spacing:1.2px;line-height:1.8}.projects-box .project-description h3{font-family:Manrope,sans-serif;font-size:38px;line-height:1.1;letter-spacing:-1.8px;margin:20px 0}.projects-box .project-description p{font-size:12px;line-height:1.9;margin:0;color:var(--muted)}.project-tags{display:flex;flex-wrap:wrap;gap:7px;list-style:none;padding:0;margin:21px 0 27px}.project-tags li{padding:7px 9px;border:1px solid var(--line);border-radius:20px;font-size:8px}.project-description .button{font-size:11px;padding:14px 20px;gap:30px}.project-link .vector-icon{width:16px;height:16px}.project-description small{display:block;color:var(--muted);font-size:8px;line-height:1.8;margin-top:15px}
+@media(max-width:900px){.projects-box.project-showcase{grid-template-columns:1.15fr 1fr}.project-stage{padding:28px 22px}.project-description{padding:30px 24px}.projects-box .project-description h3{font-size:31px}}
+@media(max-width:650px){.projects-box.project-showcase{grid-template-columns:1fr}.project-stage{padding:25px 23px 22px}.project-number{font-size:8px;margin-bottom:25px}.project-stage-note{font-size:9px;margin-top:24px}.project-description{padding:28px 25px 30px}.projects-box .project-description h3{font-size:34px;margin-top:17px}.project-description .eyebrow{font-size:7px}.preview-open{opacity:1;translate:0 0;font-size:8px;padding:8px 11px;bottom:9px;right:9px}.preview-toolbar{height:24px;font-size:6px}.project-tags li{font-size:8px}.project-preview{transform:rotate(-2deg)}}
+@media(prefers-reduced-motion:reduce){.project-preview{transition:none}.preview-open{transition:none}}
+
+/* Stable preview frame; motion stays inside the clickable area. */
+.project-tags li{font-size:10px;padding:8px 11px;line-height:1.4}
+.project-preview img{transform:scale(1);transform-origin:50% 50%;transition:transform .75s cubic-bezier(.22,1,.36,1)}
+.preview-open{transition:opacity .25s ease,translate .35s cubic-bezier(.22,1,.36,1)}
+@media(hover:hover) and (pointer:fine){.project-preview:hover img,.project-preview:focus-visible img{transform:scale(1.035)}}
+@media(max-width:650px){.project-tags li{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.project-preview img,.preview-open{transition:none}.project-preview:hover img,.project-preview:focus-visible img{transform:none}}
